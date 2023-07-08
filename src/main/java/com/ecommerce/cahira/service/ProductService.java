@@ -12,4 +12,5 @@ public interface ProductService {
     public Optional<Product> getProductById(Integer id);
     public List<Product> getAllProductByCategoryId(Integer id);
 
+    Object searchProductsByName(String productName);
 }

@@ -6,6 +6,7 @@ import com.ecommerce.cahira.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -38,4 +39,21 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> getAllProductByCategoryId(Integer id) {
         return productRepository.findAllByCategory_Id(id);
     }
+
+    @Override
+    public Object searchProductsByName(String productName) {
+        List<Product> searchResults = new ArrayList<>();
+        List<Product> allProducts = getAllProduct();
+
+        for (Product product : allProducts) {
+            if (product.getName().toLowerCase().contains(productName.toLowerCase())) {
+                searchResults.add(product);
+            }
+        }
+
+
+        return searchResults;
+    }
+
+
 }
