@@ -186,7 +186,7 @@
                                         <p class="mb-0">(including VAT)</p>
                                     </strong>
                                 </div>
-                                <span><strong>Rs<span th:text="${total}"></span></strong></span>
+                                <span><strong>Rs<span th:text="${total}" id="total"></span></strong></span>
                             </li>
                         </ul>
 
@@ -266,7 +266,7 @@
             }
         };
 
-        var checkout = new KhaltiCheckout(config);
+       var checkout = new KhaltiCheckout(config);
         var btn = document.getElementById("payment-button");
         btn.onclick = function () {
             // minimum transaction amount must be 10, i.e 1000 in paisa.

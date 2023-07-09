@@ -56,6 +56,11 @@ public class HomeController {
         return "forindex/search";
     }
 
+    @GetMapping("/ourteam")
+    public String ourTeam(){
+        return "/forindex/ourteam";
+    }
+
 
 
 
