@@ -14,7 +14,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
   <a class="navbar-brand" href="#">
-    <img th:src="@{/images/logo.png}"  src="../static/images/logo.png" width="100" height="80" alt=""/>
+    <img th:src="@{/images/logo.png}"  src="../static/images/logo.png" width="150" height="150" alt=""/>
   </a>
   <button
           class="navbar-toggler"
@@ -82,28 +82,27 @@
   <div class="row">
     <div class="col-12">
       <div class="card-deck">
-        <div th:each="product : ${products}">
-<!--          <div class="card">-->
-            <div class="card-body">
-<!--              <div class="row">-->
-                <div class="col-md-4">
-                  <div class="card">
-                    <img class="card-img-top" th:src="@{${'/productImages/' + product.imageName}}" th:alt="${product.name}">
-                    <div class="card-body">
-                      <h5 class="card-title" th:text="${product.name}"></h5>
-                      <p class="card-text" th:text="${product.description}"></p>
-<!--                      <a href="#" class="btn btn-primary">Buy Now</a>-->
-                    </div>
-                  </div>
-                </div>
-<!--              </div>-->
+        <div th:if="${not #lists.isEmpty(products)}" th:each="product : ${products}">
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" th:src="@{${'/productImages/' + product.imageName}}" th:alt="${product.name}">
+              <div class="card-body">
+                <h5 class="card-title" th:text="${product.name}"></h5>
+                <p class="card-text" th:text="${product.description}"></p>
+              </div>
             </div>
-<!--          </div>-->
+          </div>
+        </div>
+        <div th:unless="${not #lists.isEmpty(products)}">
+          <div class="col-12">
+            <p>No products found.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 
 
 

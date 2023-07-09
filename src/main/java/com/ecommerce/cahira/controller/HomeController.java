@@ -55,6 +55,13 @@ public class HomeController {
         model.addAttribute("products", productService.searchProductsByName(productName));
         return "forindex/search";
     }
+    @GetMapping("/contact")
+    public String contactUs(){
+        return "forindex/contact";
+    }
+
+
+
 
     @GetMapping("/ourteam")
     public String ourTeam(){

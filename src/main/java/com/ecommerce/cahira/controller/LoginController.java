@@ -27,7 +27,7 @@ public class LoginController {
     RoleRepository roleRepository;
     @GetMapping("/login")
     public String login(){
-        GlobalData.cart.size();
+        GlobalData.cart.clear();
         return "login";
     }
     @GetMapping("/register")
