@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class CartController {
     @Autowired
     ProductService productService;
+
+
     
 
     @GetMapping("/addToCart/{id}")
@@ -40,10 +42,6 @@ public class CartController {
         model.addAttribute("total", GlobalData.cart.stream().mapToDouble(Product::getPrice).sum());
         return "checkout";
     }
-//
-//    @GetMapping("/setCartItem")
-//    public String getCartItem()
-
 
 
 
