@@ -215,21 +215,23 @@
                         </ul>
 
 
-<!--                        <form action="" method="post" th:action="@{/payNow}" >-->
-<!--                            <button  id="payment-buttonn"  class="btn btn-primary btn-block waves-effect waves-light">Pay Now</button>-->
+                        <div>
+
+                            <a  th:href="@{/paynow}"><button class="btn-black"> Pay Now</button></a>
+                        </div>
+
+                        <!--                        <form action="https://uat.esewa.com.np/epay/main" method="POST">-->
+<!--                            <input th:value="${total}" name="tAmt" type="hidden">-->
+<!--                            <input th:value="${total}" name="amt" type="hidden">-->
+<!--                            <input value="0" name="txAmt" type="hidden">-->
+<!--                            <input value="0" name="psc" type="hidden">-->
+<!--                            <input value="0" name="pdc" type="hidden">-->
+<!--                            <input value="EPAYTEST" name="scd" type="hidden">-->
+<!--                            <input value="ee2c3ca1-696b-4cc5-a6be-2c40d929d453" name="pid" type="hidden">-->
+<!--                            <input value="http://localhost:8080/?q=su" type="hidden" name="su">-->
+<!--                            <input value="http://localhost:8080/?q=fu" type="hidden" name="fu">-->
+<!--                            <input class="btn btn-primary btn-block waves-effect waves-light" value="payNow with esewa" type="submit">-->
 <!--                        </form>-->
-                        <form action="https://uat.esewa.com.np/epay/main" method="POST">
-                            <input th:value="${total}" name="tAmt" type="hidden">
-                            <input th:value="${total}" name="amt" type="hidden">
-                            <input value="0" name="txAmt" type="hidden">
-                            <input value="0" name="psc" type="hidden">
-                            <input value="0" name="pdc" type="hidden">
-                            <input value="EPAYTEST" name="scd" type="hidden">
-                            <input value="ee2c3ca1-696b-4cc5-a6be-2c40d929d453" name="pid" type="hidden">
-                            <input value="http://localhost:8080/?q=su" type="hidden" name="su">
-                            <input value="http://localhost:8080/?q=fu" type="hidden" name="fu">
-                            <input class="btn btn-primary btn-block waves-effect waves-light" value="payNow with esewa" type="submit">
-                        </form>
 
 
 

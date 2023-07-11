@@ -68,6 +68,11 @@ public class HomeController {
         return "/forindex/ourteam";
     }
 
+    @GetMapping("/success")
+    public String paymant(){
+        return "/forindex/success";
+    }
+
 
 
 
